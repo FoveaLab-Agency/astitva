@@ -8,8 +8,6 @@ const grotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-grotesk', 
 
 export const metadata: Metadata = {
   title: 'ASTITVA — Where Ideas Collide, Imagination Comes Alive',
-  description:
-    'ASTITVA is a college festival of creativity, technology, culture, competition and innovation. Explore 20 events orbiting a living galaxy.',
   generator: 'v0.app',
   icons: {
     icon: [
