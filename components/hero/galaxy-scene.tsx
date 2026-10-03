@@ -1,8 +1,10 @@
 'use client'
 
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useMemo, useRef } from 'react'
+import { type RefObject, useMemo, useRef } from 'react'
 import * as THREE from 'three'
+
+export type GalaxyView = { yaw: number; pitch: number; zoom: number; dragging: boolean }
 
 const vertexShader = /* glsl */ `
   uniform float uTime;
@@ -67,6 +69,8 @@ const coreFragment = /* glsl */ `
 const insideColor = new THREE.Color('#ffd6f5')
 const midColor = new THREE.Color('#8b5cf6')
 const outsideColor = new THREE.Color('#22d3ee')
+const BASE_TILT = 0.95
+const BASE_DISTANCE = 8.5
 
 function buildGalaxy(count: number) {
   const positions = new Float32Array(count * 3)
@@ -108,9 +112,10 @@ function buildGalaxy(count: number) {
   return geometry
 }
 
-function Galaxy({ count, animate }: { count: number; animate: boolean }) {
+function Galaxy({ count, playing, view }: { count: number; playing: boolean; view: RefObject<GalaxyView> }) {
   const group = useRef<THREE.Group>(null)
-  const pointer = useRef({ x: 0, y: 0 })
+  const parallax = useRef({ x: 0, y: 0 })
+  const autoYaw = useRef(0)
   const geometry = useMemo(() => buildGalaxy(count), [count])
   const uniforms = useMemo(
     () => ({
@@ -122,21 +127,32 @@ function Galaxy({ count, animate }: { count: number; animate: boolean }) {
   const coreUniforms = useMemo(() => ({ uTime: { value: 0 } }), [])
 
   useFrame((state, delta) => {
-    if (animate) {
+    const v = view.current
+    const g = group.current
+    if (!g || !v) return
+
+    if (playing) {
       uniforms.uTime.value += delta * 0.35
       coreUniforms.uTime.value += delta
+      if (!v.dragging) autoYaw.current += delta * 0.03
     }
-    const g = group.current
-    if (!g) return
-    pointer.current.x += (state.pointer.x - pointer.current.x) * 0.04
-    pointer.current.y += (state.pointer.y - pointer.current.y) * 0.04
-    g.rotation.x = 0.95 - pointer.current.y * 0.18
-    g.rotation.z = pointer.current.x * 0.15
-    if (animate) g.rotation.y += delta * 0.03
+
+    const targetParallaxX = playing && !v.dragging ? state.pointer.x : 0
+    const targetParallaxY = playing && !v.dragging ? state.pointer.y : 0
+    parallax.current.x += (targetParallaxX - parallax.current.x) * 0.04
+    parallax.current.y += (targetParallaxY - parallax.current.y) * 0.04
+
+    const ease = 1 - Math.pow(0.001, delta)
+    g.rotation.x += (BASE_TILT + v.pitch - parallax.current.y * 0.18 - g.rotation.x) * ease
+    g.rotation.y += (autoYaw.current + v.yaw - g.rotation.y) * ease
+    g.rotation.z += (parallax.current.x * 0.15 - g.rotation.z) * ease
+
+    const targetZ = BASE_DISTANCE / v.zoom
+    state.camera.position.z += (targetZ - state.camera.position.z) * ease
   })
 
   return (
-    <group ref={group} rotation={[0.95, 0, 0]}>
+    <group ref={group} rotation={[BASE_TILT, 0, 0]}>
       <points geometry={geometry}>
         <shaderMaterial
           vertexShader={vertexShader}
@@ -148,7 +164,7 @@ function Galaxy({ count, animate }: { count: number; animate: boolean }) {
           blending={THREE.AdditiveBlending}
         />
       </points>
-      <mesh rotation={[-0.95, 0, 0]}>
+      <mesh rotation={[-BASE_TILT, 0, 0]}>
         <planeGeometry args={[6, 6]} />
         <shaderMaterial
           vertexShader={coreVertex}
@@ -163,19 +179,21 @@ function Galaxy({ count, animate }: { count: number; animate: boolean }) {
   )
 }
 
-export default function GalaxyScene() {
+export default function GalaxyScene({ playing, view }: { playing: boolean; view: RefObject<GalaxyView> }) {
   const isSmall = typeof window !== 'undefined' && window.innerWidth < 768
-  const reduceMotion =
-    typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   return (
     <Canvas
-      camera={{ position: [0, 0, 8.5], fov: 50 }}
+      camera={{ position: [0, 0, BASE_DISTANCE], fov: 50 }}
       dpr={[1, 2]}
       gl={{ alpha: true, antialias: false, powerPreference: 'high-performance' }}
       style={{ background: 'transparent' }}
+      fallback={
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src="/images/galaxy.png" alt="" className="h-full w-full object-contain opacity-80" />
+      }
     >
-      <Galaxy count={isSmall ? 22000 : 48000} animate={!reduceMotion} />
+      <Galaxy count={isSmall ? 22000 : 48000} playing={playing} view={view} />
     </Canvas>
   )
 }

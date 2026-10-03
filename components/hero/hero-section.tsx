@@ -8,9 +8,7 @@ export function HeroSection() {
       id="top"
       className="relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 pb-20 pt-32 text-center"
     >
-      <GalaxyOrb />
-
-      <div className="relative z-10 flex flex-col items-center">
+      <div className="pointer-events-none relative z-10 flex flex-col items-center [&_a]:pointer-events-auto">
         <p className="glass mb-8 rounded-full px-4 py-1.5 text-[11px] uppercase tracking-[0.35em] text-cyan">
           College Fest · 2026 Edition
         </p>
@@ -51,6 +49,8 @@ export function HeroSection() {
           </dl>
         </div>
       </div>
+
+      <GalaxyOrb />
     </section>
   )
 }
