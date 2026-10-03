@@ -21,11 +21,6 @@ export function HeroSection() {
           {'“Where Ideas Collide, Imagination Comes Alive.”'}
         </p>
 
-        <p className="mt-6 max-w-xl text-pretty leading-relaxed text-white/85 [text-shadow:0_1px_12px_rgb(2_3_10/0.95),0_0_2px_rgb(2_3_10)]">
-          A convergence of creativity, technology, culture, competition and innovation — where every student finds a
-          universe of their own.
-        </p>
-
         <div className="mt-[min(26vh,14rem)] flex flex-col items-center gap-6">
           <MagneticButton href="#events">
             <span className="flex items-center gap-3">
@@ -36,7 +31,7 @@ export function HeroSection() {
           <dl className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">
             <div className="flex gap-2">
               <dt className="sr-only">Dates</dt>
-              <dd>Mar 20 — 22</dd>
+              <dd>Oct 30 — 31</dd>
             </div>
             <div className="flex gap-2">
               <dt className="sr-only">Events</dt>
@@ -44,7 +39,7 @@ export function HeroSection() {
             </div>
             <div className="flex gap-2">
               <dt className="sr-only">Venue</dt>
-              <dd>Main Campus</dd>
+              <dd>Lingaraj College</dd>
             </div>
           </dl>
         </div>
