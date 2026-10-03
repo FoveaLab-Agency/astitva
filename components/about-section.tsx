@@ -4,22 +4,22 @@ import { Reveal } from '@/components/cosmos/reveal'
 import { SectionEyebrow } from '@/components/section-eyebrow'
 
 const stats = [
-  { value: '20', label: 'Events' },
-  { value: '3', label: 'Days' },
-  { value: '5K+', label: 'Explorers' },
-  { value: '50+', label: 'Colleges' },
+  { value: '20+', label: 'Events' },
+  { value: '2', label: 'Days' },
+  { value: '2K+', label: 'Explorers' },
+  { value: '25+', label: 'Colleges' },
 ]
 
 const panels = [
   {
     icon: GraduationCap,
     title: 'About the College',
-    body: 'Our college is a hub of academic rigour and creative freedom — home to a vibrant student community, award-winning faculty and a culture that celebrates curiosity. Replace this with your institution’s story and achievements.',
+    body: 'Our college is a hub of academic rigour and creative freedom — home to a vibrant student community and a culture that celebrates curiosity. Replace this with your institution’s story and achievements.',
   },
   {
     icon: Users,
     title: 'Event Organizers',
-    body: 'Astitva is crafted by a passionate team of student organizers, volunteers and faculty mentors who turn ambitious ideas into a seamless, unforgettable experience. Introduce your core team here.',
+    body: 'Astitva is crafted by a passionate team of student organizers, volunteers and faculty mentors who turn ambitious ideas into a seamless, unforgettable experience.',
   },
 ]
 
@@ -39,7 +39,7 @@ export function AboutSection() {
           </h2>
           <p className="mt-6 max-w-xl text-pretty leading-relaxed text-muted-foreground">
             Astitva — meaning existence — is where thousands of minds converge to compete, create and collaborate. Across
-            three days, twenty events pull talent into orbit: from code and circuits to stage, sound and story.
+            two days, twenty plus events pull talent into orbit: from imagination & creativity to stage.
           </p>
 
           <dl className="mt-10 grid max-w-lg grid-cols-4 gap-4">
