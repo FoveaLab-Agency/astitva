@@ -5,7 +5,7 @@ import { Reveal } from '@/components/cosmos/reveal'
 const contacts = [
   { icon: Mail, label: 'Email', value: 'hello@astitva.fest', href: 'mailto:hello@astitva.fest' },
   { icon: Phone, label: 'Phone', value: '+91 00000 00000', href: 'tel:+910000000000' },
-  { icon: MapPin, label: 'Venue', value: 'Main Campus, Your College', href: '#contact' },
+  { icon: MapPin, label: 'Venue', value: 'Lingaraj College, Belagavi', href: '#contact' },
 ]
 
 export function SiteFooter() {
@@ -16,12 +16,12 @@ export function SiteFooter() {
           aria-hidden="true"
           className="pointer-events-none absolute -top-32 left-1/2 h-64 w-[80%] -translate-x-1/2 rounded-full bg-violet/25 blur-3xl"
         />
-        <p className="relative font-display text-xs uppercase tracking-[0.35em] text-cyan">03 — Join the orbit</p>
+        <p className="relative font-display text-xs uppercase tracking-[0.35em] text-cyan">03 — Join the Orbit</p>
         <h2 className="relative mt-4 text-balance font-display text-3xl text-white md:text-5xl">
-          Your universe is waiting.
+          Your Universe is waiting.
         </h2>
         <p className="relative mx-auto mt-4 max-w-md text-sm text-muted-foreground">
-          Registrations open soon. Gather your crew and prepare for launch.
+          Registrations are open. Gather your crew and prepare for launch.
         </p>
         <div className="relative mt-8 flex justify-center">
           <MagneticButton href="mailto:hello@astitva.fest">
