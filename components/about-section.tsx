@@ -34,7 +34,7 @@ export function AboutSection() {
       <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
         <Reveal>
           <SectionEyebrow index="01">About Astitva</SectionEyebrow>
-          <h2 className="mt-5 text-balance font-display text-3xl font-bold leading-tight text-white md:text-5xl">
+          <h2 className="mt-5 text-balance font-display text-3xl leading-tight text-white md:text-5xl">
             A festival discovered inside a <span className="text-cyan text-glow">living galaxy</span>.
           </h2>
           <p className="mt-6 max-w-xl text-pretty leading-relaxed text-muted-foreground">
@@ -46,7 +46,7 @@ export function AboutSection() {
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col-reverse border-l border-cyan/30 pl-3">
                 <dt className="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{stat.label}</dt>
-                <dd className="font-display text-2xl font-bold text-white md:text-3xl">{stat.value}</dd>
+                <dd className="font-display text-2xl text-white md:text-3xl">{stat.value}</dd>
               </div>
             ))}
           </dl>
@@ -65,7 +65,7 @@ export function AboutSection() {
                     <panel.icon aria-hidden="true" className="h-5 w-5" />
                   </span>
                   <div>
-                    <h3 className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-white">
+                    <h3 className="font-display text-sm uppercase tracking-[0.2em] text-white">
                       {panel.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{panel.body}</p>

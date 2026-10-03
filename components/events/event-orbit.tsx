@@ -152,13 +152,13 @@ function OrbitCore({ active }: { active: AstitvaEvent | null }) {
             <p className="font-display text-[1.3cqw] tracking-[0.2em] text-cyan">
               {active.number} · {active.category}
             </p>
-            <p className="mt-[0.6cqw] font-display text-[2.4cqw] font-bold leading-tight text-white">{active.name}</p>
+            <p className="mt-[0.6cqw] font-display text-[2.4cqw] leading-tight text-white">{active.name}</p>
             <p className="mt-[0.6cqw] hidden text-[1.25cqw] leading-snug text-white/80 @min-[560px]:block">
               {active.description}
             </p>
           </div>
         ) : (
-          <p className="text-glow font-display text-[3.2cqw] font-black tracking-[0.2em] text-white">ASTITVA</p>
+          <p className="text-glow font-display text-[3.2cqw] tracking-[0.2em] text-white">ASTITVA</p>
         )}
       </div>
     </div>
@@ -210,7 +210,7 @@ function OrbitNode({ event, hue, bobDelay, isActive, isSelected, onHover, onSele
           className="my-[0.4cqw] hidden h-[2.6cqw] w-[2.6cqw] @min-[480px]:block"
           style={{ color: hue }}
         />
-        <span className="hidden font-display text-[1.15cqw] font-semibold tracking-wider @min-[640px]:block">
+        <span className="hidden font-display text-[1.15cqw] tracking-wider @min-[640px]:block">
           {event.name}
         </span>
       </button>
@@ -238,7 +238,7 @@ function EventDetailCard({ event, onClose }: { event: AstitvaEvent; onClose: () 
           <p className="font-display text-[10px] uppercase tracking-[0.3em] text-cyan">
             {event.number} · {event.category}
           </p>
-          <h3 className="font-display text-lg font-bold text-white">{event.name}</h3>
+          <h3 className="font-display text-lg text-white">{event.name}</h3>
         </div>
       </div>
       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{event.description}</p>

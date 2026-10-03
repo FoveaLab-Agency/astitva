@@ -6,7 +6,7 @@
 
 @theme inline {
   --font-sans: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-orbitron), var(--font-grotesk), sans-serif;
+  --font-display: var(--font-anton), var(--font-grotesk), sans-serif;
 
   --color-void: #02030a;
   --color-abyss: #050816;

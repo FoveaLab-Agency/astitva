@@ -9,7 +9,7 @@ export function EventsSection() {
         <div className="flex justify-center">
           <SectionEyebrow index="02">The Multiverse</SectionEyebrow>
         </div>
-        <h2 className="text-glow mt-5 font-display text-4xl font-black tracking-[0.08em] text-white md:text-6xl">
+        <h2 className="text-glow mt-5 font-display text-4xl tracking-[0.08em] text-white md:text-6xl">
           EXPLORE THE EVENTS
         </h2>
         <p className="mt-4 text-pretty font-display text-sm tracking-[0.2em] text-cyan md:text-base">

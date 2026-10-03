@@ -1,9 +1,9 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Orbitron, Space_Grotesk } from 'next/font/google'
+import { Anton, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const orbitron = Orbitron({ subsets: ['latin'], variable: '--font-orbitron', display: 'swap' })
+const anton = Anton({ subsets: ['latin'], weight: '400', variable: '--font-anton', display: 'swap' })
 const grotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-grotesk', display: 'swap' })
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${grotesk.variable} bg-void`}>
+    <html lang="en" className={`${anton.variable} ${grotesk.variable} bg-void`}>
       <body className="antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

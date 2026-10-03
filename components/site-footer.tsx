@@ -17,7 +17,7 @@ export function SiteFooter() {
           className="pointer-events-none absolute -top-32 left-1/2 h-64 w-[80%] -translate-x-1/2 rounded-full bg-violet/25 blur-3xl"
         />
         <p className="relative font-display text-xs uppercase tracking-[0.35em] text-cyan">03 — Join the orbit</p>
-        <h2 className="relative mt-4 text-balance font-display text-3xl font-bold text-white md:text-5xl">
+        <h2 className="relative mt-4 text-balance font-display text-3xl text-white md:text-5xl">
           Your universe is waiting.
         </h2>
         <p className="relative mx-auto mt-4 max-w-md text-sm text-muted-foreground">

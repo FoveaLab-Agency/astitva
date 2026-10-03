@@ -34,7 +34,7 @@ export function MagneticButton({ href, children, className }: MagneticButtonProp
       onPointerMove={onPointerMove}
       onPointerLeave={reset}
       className={cn(
-        'group relative inline-flex items-center gap-3 overflow-hidden rounded-full px-8 py-4 font-display text-sm font-semibold tracking-[0.3em] text-white transition-[transform,box-shadow] duration-300 ease-out',
+        'group relative inline-flex items-center gap-3 overflow-hidden rounded-full px-8 py-4 font-display text-sm tracking-[0.3em] text-white transition-[transform,box-shadow] duration-300 ease-out',
         'glass border-cyan/40 shadow-[0_0_30px_-6px_oklch(0.84_0.14_205/0.6),0_0_60px_-20px_oklch(0.62_0.22_290/0.8)]',
         'hover:shadow-[0_0_45px_-4px_oklch(0.84_0.14_205/0.9),0_0_90px_-10px_oklch(0.62_0.22_290/0.9)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan',
         className,

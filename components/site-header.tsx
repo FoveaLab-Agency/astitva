@@ -11,7 +11,7 @@ export function SiteHeader() {
         aria-label="Primary"
         className="glass mx-auto flex max-w-6xl items-center justify-between rounded-full px-5 py-3"
       >
-        <a href="#top" className="flex items-center gap-2 font-display text-sm font-bold tracking-[0.35em] text-white">
+        <a href="#top" className="flex items-center gap-2 font-display text-sm tracking-[0.35em] text-white">
           <span aria-hidden="true" className="h-2 w-2 rounded-full bg-cyan shadow-[0_0_12px_2px_oklch(0.84_0.14_205/0.8)]" />
           ASTITVA
         </a>

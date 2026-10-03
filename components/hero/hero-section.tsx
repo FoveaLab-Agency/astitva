@@ -15,11 +15,11 @@ export function HeroSection() {
           College Fest · 2026 Edition
         </p>
 
-        <h1 className="text-glow font-display text-6xl font-black tracking-[0.12em] text-white sm:text-8xl md:text-9xl lg:text-[10rem] lg:leading-none">
+        <h1 className="text-glow font-display text-6xl tracking-[0.12em] text-white sm:text-8xl md:text-9xl lg:text-[10rem] lg:leading-none">
           ASTITVA
         </h1>
 
-        <p className="mt-6 text-balance font-display text-base font-medium tracking-[0.15em] text-cyan sm:text-xl">
+        <p className="mt-6 text-balance font-display text-base tracking-[0.15em] text-cyan sm:text-xl">
           {'“Where Ideas Collide, Imagination Comes Alive.”'}
         </p>
 
