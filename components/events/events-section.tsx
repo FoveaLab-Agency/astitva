@@ -16,7 +16,7 @@ export function EventsSection() {
           {'“Choose your universe. Enter the challenge.”'}
         </p>
         <p className="mx-auto mt-4 max-w-md text-sm text-muted-foreground">
-          Twenty worlds orbit the Astitva core. Hover or tap a planet to pause its orbit and reveal its mission.
+          Twenty plus worlds orbit the Astitva core. Hover or tap a planet to pause its orbit and reveal its mission.
         </p>
       </Reveal>
 
