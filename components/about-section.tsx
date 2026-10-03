@@ -27,7 +27,7 @@ export function AboutSection() {
   return (
     <section id="about" className="relative scroll-mt-24 px-6 py-28 md:py-36">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <Image src="/images/nebula.png" alt="" fill sizes="100vw" className="object-cover opacity-35 mix-blend-screen" />
+        <Image src="/images/nebula.png" alt="" fill sizes="100vw" className="object-cover opacity-20 mix-blend-screen" />
         <div className="absolute inset-0 bg-gradient-to-b from-void via-transparent to-void" />
       </div>
 
