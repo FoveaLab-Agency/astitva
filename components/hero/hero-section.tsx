@@ -35,7 +35,7 @@ export function HeroSection() {
             </div>
             <div className="flex gap-2">
               <dt className="sr-only">Events</dt>
-              <dd>20 Events</dd>
+              <dd>20+ Events</dd>
             </div>
             <div className="flex gap-2">
               <dt className="sr-only">Venue</dt>
