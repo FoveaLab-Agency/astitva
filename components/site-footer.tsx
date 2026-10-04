@@ -3,7 +3,7 @@ import { MagneticButton } from '@/components/cosmos/magnetic-button'
 import { Reveal } from '@/components/cosmos/reveal'
 
 const contacts = [
-  { icon: Mail, label: 'Email', value: 'hello@astitva.fest', href: 'mailto:hello@astitva.fest' },
+  { icon: Mail, label: 'Email', value: 'astitva@kleslingarajcollege.edu.in', href: 'mailto:astitva@kleslingarajcollege.edu.in' },
   { icon: Phone, label: 'Phone', value: '+91 00000 00000', href: 'tel:+910000000000' },
   { icon: MapPin, label: 'Venue', value: 'Lingaraj College, Belagavi', href: '#contact' },
 ]
