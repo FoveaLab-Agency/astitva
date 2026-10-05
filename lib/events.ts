@@ -35,8 +35,8 @@ export type AstitvaEvent = {
 const eventSeeds: Array<Omit<AstitvaEvent, 'id' | 'number'>> = [
   { name: 'Event 01', category: 'Technology', icon: Code2, description: 'A non-stop build sprint where code meets the clock.' },
   { name: 'Event 02', category: 'Robotics', icon: Bot, description: 'Machines you build battle across a gravity-defying arena.' },
-  { name: 'Event 03', category: 'Dance', icon: Music, description: 'Bands collide in a sonic showdown under the stars.' },
-  { name: 'Event 04', category: 'Design', icon: Palette, description: 'Craft visual worlds that bend perception and form.' },
+  { name: 'Dance', category: 'Event 03', icon: Music, description: 'Bands collide in a sonic showdown under the stars.' },
+  { name: 'Design', category: 'Event 04', icon: Palette, description: 'Craft visual worlds that bend perception and form.' },
   { name: 'Event 05', category: 'Quiz', icon: Lightbulb, description: 'Pitch the idea that could reshape a universe.' },
   { name: 'Event 06', category: 'EFootball', icon: Gamepad2, description: 'Squads clash for galactic glory in esports arenas.' },
   { name: 'Event 07', category: 'Reel Making', icon: Drama, description: 'Stories staged across stages and stranger dimensions.' },
