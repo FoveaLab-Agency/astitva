@@ -1,5 +1,5 @@
 import {
-  Atom,
+  Ship,
   Bot,
   Brush,
   Camera,
@@ -41,7 +41,7 @@ const eventSeeds: Array<Omit<AstitvaEvent, 'id' | 'number'>> = [
   { name: 'Event 06', category: 'Gaming', icon: Gamepad2, description: 'Squads clash for galactic glory in esports arenas.' },
   { name: 'Event 07', category: 'Theatre', icon: Drama, description: 'Stories staged across stages and stranger dimensions.' },
   { name: 'Event 08', category: 'Photography', icon: Camera, description: 'Capture the moment where light becomes legend.' },
-  { name: 'Event 09', category: 'Science', icon: Atom, description: 'Experiments and models that decode the cosmos.' },
+  { name: 'Event 09', category: 'Science', icon: Ship, description: 'Experiments and models that decode the cosmos.' },
   { name: 'Event 10', category: 'Speaking', icon: Mic2, description: 'Debate, persuade, and command the room.' },
   { name: 'Event 11', category: 'Hardware', icon: Cpu, description: 'Circuits, sensors and signals wired to win.' },
   { name: 'Event 12', category: 'Fine Arts', icon: Brush, description: 'Canvas, colour and chaos turned into art.' },
