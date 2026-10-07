@@ -24,7 +24,7 @@ export function SiteFooter() {
           Registrations are open. Gather your crew and prepare for launch.
         </p>
         <div className="relative mt-8 flex justify-center">
-          <MagneticButton href="https://astitva-emergencebeyondexistence-portal.bolt.host/">
+          <MagneticButton href="https://astitva-emrgencebeyondexistence-portal.bolt.host/">
             <span className="flex items-center gap-3">
               REGISTER NOW <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </span>
