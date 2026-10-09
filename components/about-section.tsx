@@ -14,7 +14,7 @@ const panels = [
   {
     icon: GraduationCap,
     title: 'About the College',
-    body: 'lingaraj college',
+    body: 'The Lingaraj College has a rich heritage and a glorious past. It has been rendering yeoman service in the field of education and has produced many great luminaries in various walks of life',
   },
   {
     icon: Users,
