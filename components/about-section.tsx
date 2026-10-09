@@ -14,7 +14,7 @@ const panels = [
   {
     icon: GraduationCap,
     title: 'About the College',
-    body: 'The Lingaraj College has a rich heritage and a glorious past. It has been rendering yeoman service in the field of education and has produced many great luminaries in various walks of life. The Lingaraj College - The majestic stone masonary structure designed in European style with landscape garden to its grace not only echoes the glorious history of the college but also provides an ideal setting of academic pursuits. Every brick and every room of Lingaraj College is an amalgamation of the values of Truth, Love, Service and Sacrifice' - ideology that the K. L. E. Society stands for. For those who have not heard of or seen Lingaraj College, an interesting experience awaits them when they come and see it. It is this experience that gives the learners in the college, a rare joy which they can hardly forget. Such a compulsion, perhaps, made the people unofficially crown Lingaraj College as the mother of colleges in North Karnataka.  ',
+    body: 'lingaraj college',
   },
   {
     icon: Users,
