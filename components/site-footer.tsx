@@ -4,7 +4,7 @@ import { Reveal } from '@/components/cosmos/reveal'
 
 const contacts = [
   { icon: Mail, label: 'Email', value: 'astitva@kleslingarajcollege.edu.in', href: 'mailto:astitva@kleslingarajcollege.edu.in' },
-  { icon: Phone, label: 'Phone', value: '+91 8861891530', href: 'tel:+91 8861891530' },
+  { icon: Phone, label: 'Phone', value: '+918861891530', href: 'tel:+918861891530' },
   { icon: MapPin, label: 'Venue', value: 'Lingaraj College, Belagavi', href: '#contact' },
 ]
 
